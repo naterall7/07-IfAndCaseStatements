@@ -1,7 +1,7 @@
 txt = "The quick brown fox jumps over the lazy dog."
 
 ###############################################################################
-# TODO: 1. (2 pts)
+# DONE: 1. (2 pts)
 #
 #   Write a function called is_positive() that takes one parameter:
 #     - number (float)
@@ -14,8 +14,14 @@ txt = "The quick brown fox jumps over the lazy dog."
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
 
+def is_positive(number):
+    if number >= 0: 
+        return True
+    else: 
+        return False
+print(is_positive(number = 42.6))
 ###############################################################################
-# TODO: 2. (2 pts)
+# DONE: 2. (2 pts)
 #
 #   Write a function called contains() that takes two parameters:
 #     - str (string)
@@ -33,8 +39,14 @@ txt = "The quick brown fox jumps over the lazy dog."
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
 
+def contains(first, second):
+    if second in first:
+        return True
+    else:
+        return False
+print(contains(first = "que sera sera", second = " "))
 ###############################################################################
-# TODO: 3. (3 pts)
+# DONE: 3. (3 pts)
 #
 #   Write a function called display_rating() that takes one parameter:
 #     - rating (float)
@@ -63,3 +75,16 @@ txt = "The quick brown fox jumps over the lazy dog."
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+
+def display_rating(score):
+    if 4 <= score <= 5:
+        return "Fantastic, this is one of the highest possible scores!"
+    if 3 <= score < 4:
+        return "Nice, this is a good score, keep going!"
+    if 2 <= score < 3:
+        return "This score is okay, but you can improve!"
+    if 1 <= score < 2:
+        return "Yeah, this score is bad, maybe it is time for a career change!"
+    else:
+        return "Invalid score given."
+print(display_rating(1.2))

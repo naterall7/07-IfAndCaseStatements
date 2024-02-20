@@ -1,5 +1,5 @@
 ###############################################################################
-# TODO: 1. (3 pts)
+# DONE: 1. (3 pts)
 #
 #   Write a function called color_picker() that prints out a message to a user.
 #
@@ -17,8 +17,29 @@
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
 
+def color_picker():
+    answer = input("Please select a color from the rainbow, inferior human: ")
+    match answer:
+        case "red":
+            print("Success! The inferior human has selected red! The color of inferior human blood!")
+        case "orange":
+            print("Success! The inferior human has selected orange! The color of fire!")
+        case "yellow":
+            print("Success! The inferior human has selected yellow! The color of the sun!")
+        case "green":
+            print("Success! The inferior human has selected green! The color of the grass!")
+        case "blue":
+            print("Success! The inferior human has selected blue! The color of the ocean!")
+        case "indigo":
+            print("Success! The inferior human has selected indigo! The color of the indigo plant!")
+        case "violet":
+            print("Success! The inferior human has selected violet! The color of the violet flower!")
+        case other:
+            print("Failure! Color is not on the rainbow!")
+color_picker()
+
 ###############################################################################
-# TODO: 2. (3 pts)
+# DONE: 2. (3 pts)
 #
 #   Write a function called grade() that tells a student what letter grade they
 #   got on an assignment based on the percentage they indicate.
@@ -36,3 +57,18 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+
+def grade():
+    score = float(input("Please enter your percentage as a decimal: "))
+    match score:
+        case _ if 0.90 <= score < 1:
+            print("You received a(n) A!")
+        case _ if 0.80 <= score < 0.90:
+            print("You received a(n) B!")
+        case _ if 0.70 <= score < 0.80:
+            print("You received a(n) C!")
+        case _ if 0.60 <= score < 0.70:
+            print("You received a(n) D!")
+        case _ if score < 0.60:
+            print("You received a(n) F!")
+grade()
